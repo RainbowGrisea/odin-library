@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>library</h1>
+    </header>
+
+    <div class="container">
+      <button type="button" class="openModalButton">+ add book</button>
+      <div class="modal">
+        <div class="modalContent">
+          <span class="close">&times;</span>
+          <form action="">
+            <label for="bookTitle">Title:</label>
+            <input type="text" name="bookTitle" id="bookTitle" />
+            <label for="bookAuthor">Author:</label>
+            <input type="text" name="bookAuthor" id="bookAuthor" />
+            <label for="bookPages">Pages:</label>
+            <input type="number" name="bookPages" id="bookPages" />
+            <label for="bookRead">Read:</label>
+            <input type="checkbox" name="bookRead" id="bookRead" />
+            <button type="button" class="addBookButton">Add book</button>
+          </form>
+        </div>
+      </div>
+      <div class="bookSection"></div>
+      <footer>
+        <a href="https://github.com/RainbowGrisea"
+          >Copyright © 2023 Rainbowgrisea</a
+        >
+      </footer>
+    </div>
+  </body>
+</html>
