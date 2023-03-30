@@ -1,4 +1,4 @@
-let myLibrary = [
+const myLibrary = [
   {
     title: 'Guns, Germs and Steel',
     author: 'Jared Diamond',
@@ -13,12 +13,22 @@ let myLibrary = [
   },
 ];
 
-function NewBook(title, author, pages, read) {
-  this.title = title;
-  this.author = author;
-  this.pages = pages;
-  this.read = read;
+
+class Book {
+  constructor( title, author, pages, read ) {
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.read = read;
+  }
 }
+
+// function NewBook(title, author, pages, read) {
+//   this.title = title;
+//   this.author = author;
+//   this.pages = pages;
+//   this.read = read;
+// }
 
 const addBookButton = document.querySelector('.addBookButton');
 const openModalButton = document.querySelector('.openModalButton');
@@ -53,7 +63,7 @@ function addBookToLibrary() {
   const author = document.querySelector('#bookAuthor').value;
   const pages = document.querySelector('#bookPages').value;
   const read = Boolean(document.querySelector('#bookRead').checked);
-  myLibrary.push(new NewBook(title, author, pages, read));
+  myLibrary.push(new Book(title, author, pages, read));
 }
 
 function addLibraryToHTML() {
@@ -116,9 +126,5 @@ function rearrangeLibrary() {
     books[i].id = i;
   }
 }
-
-// function createBookEntry() {
-//
-// }
 
 addLibraryToHTML();
